@@ -8,11 +8,12 @@ Item {
     property alias mouseArea1: mouseArea1
     property alias rectangle1: rectangle1
     property alias button: button
+    property alias mouseArea2: mouseArea2
 
     RowLayout {
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.topMargin: 20
-        anchors.top: parent.top
+        x: 256
+        y: 26
+
 
         TextField {
             id: textField1
@@ -29,23 +30,31 @@ Item {
         id: mouseArea1
         x: 32
         y: 74
-        width: 575
+        width: 361
         height: 368
-
-        Rectangle {
-            id: rectangle1
-            x: 188
-            y: 68
-            width: 200
-            height: 200
-            color: "#db1b1b"
-        }
     }
 
+
+    MouseArea {
+        id: mouseArea2
+        x: 399
+        y: 80
+        width: 369
+        height: 362
+    }
     Button {
         id: button
-        x: 470
-        y: 15
+        x: 543
+        y: 20
         text: qsTr("Exit")
+    }
+
+    Rectangle {
+        id: rectangle1
+        x: 300
+        y: 272
+        width: 200
+        height: 200
+        color: "#db1b1b"
     }
 }
