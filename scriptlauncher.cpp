@@ -16,9 +16,11 @@ void ScriptLauncher::launchScript()
 void ScriptLauncher::apagarPantalla()
 {
     m_process->start("echo 1 > /sys/class/backlight/rpi_backlight/bl_power");
+    m_process->start("./apagar");
 }
 
 void ScriptLauncher::encenderPantalla()
 {
     m_process->start("echo 0 > /sys/class/backlight/rpi_backlight/bl_power");
+    m_process->start("./encender");
 }
