@@ -7,6 +7,7 @@ Item {
     property alias button1: button1
     property alias mouseArea1: mouseArea1
     property alias rectangle1: rectangle1
+    property alias button: button
 
     RowLayout {
         anchors.horizontalCenter: parent.horizontalCenter
@@ -39,5 +40,12 @@ Item {
             height: 200
             color: "#db1b1b"
         }
+    }
+
+    Button {
+        id: button
+        x: 470
+        y: 15
+        text: qsTr("Exit")
     }
 }

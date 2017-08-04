@@ -5,6 +5,7 @@ Page2Form {
         //comando al clicar en la 2da pagina
         rectangle2.visible=false;
         ScriptLauncher.encenderPantalla();
+        console.log("pantalla apagada");
 
 
 }
