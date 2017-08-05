@@ -32,6 +32,17 @@ Item {
         y: 74
         width: 361
         height: 368
+
+        Text {
+            id: text1
+            x: 80
+            y: 151
+            width: 58
+            height: 27
+            text: qsTr("Apagar")
+            font.pixelSize: 12
+        }
+
     }
 
 
@@ -41,6 +52,14 @@ Item {
         y: 80
         width: 369
         height: 362
+
+        Text {
+            id: text2
+            x: 173
+            y: 144
+            text: qsTr("Encender")
+            font.pixelSize: 12
+        }
     }
     Button {
         id: button

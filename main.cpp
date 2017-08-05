@@ -2,7 +2,6 @@
 #include <QQmlApplicationEngine>
 #include <QProcess>
 #include "scriptlauncher.h"
-//#include "qtquick2applicationviewer.h"
 #include <QQmlContext>
 #include <QQmlComponent>
 
