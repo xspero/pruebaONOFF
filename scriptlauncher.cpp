@@ -16,18 +16,26 @@ void ScriptLauncher::launchScript()
 void ScriptLauncher::apagarPantalla()
 {
     m_process->start("echo 1 > /sys/class/backlight/rpi_backlight/bl_power");
-    m_process->start("./apagar");
-    m_process->start("sh apagar");
-    m_process->start("sh /bin/apagar");
-    m_process->start("sh ./bin/apagar");
+    m_process->kill();
+    m_process->start("apagar.sh");
+    m_process->kill();
+    m_process->start("sh apagar.sh");
+    m_process->kill();
+    m_process->start("sh /bin/apagar.sh");
+    m_process->kill();
+
 
 }
 
 void ScriptLauncher::encenderPantalla()
 {
     m_process->start("echo 0 > /sys/class/backlight/rpi_backlight/bl_power");
-    m_process->start("./encender");
-    m_process->start("sh encender");
-    m_process->start("sh /bin/encender");
-    m_process->start("sh ./bin/encender");
+    m_process->kill();
+    m_process->start("encender.sh");
+    m_process->kill();
+    m_process->start("sh encender.sh");
+    m_process->kill();
+    m_process->start("sh /bin/encender.sh");
+    m_process->kill();
+
 }
