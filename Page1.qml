@@ -1,6 +1,15 @@
 import QtQuick 2.7
 
+
 Page1Form {
+
+
+
+      date: clock.now.toLocaleDateString(Qt.locale(), "d MMM yyyy")
+      time: clock.now.toLocaleTimeString(Qt.locale(), "HH:mm")
+      day: clock.now.toLocaleDateString(Qt.locale(), "dddd")
+
+
     mouseArea2.onClicked: {
         rectangle1.visible=true;
         ScriptLauncher.encenderPantalla();

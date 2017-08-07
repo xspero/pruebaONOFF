@@ -12,13 +12,15 @@ m_process(new QProcess(this))
 
 void ScriptLauncher::launchScript()
 {
-    //m_process->start("./test.sh");
-    m_process->start("echo 0 > /sys/class/backlight/rpi_backlight/bl_power");
+
 }
+
+
+//*APAGAR Y PRENDER PANTALLA**//
 
 void ScriptLauncher::apagarPantalla()
 {
-    bool isOn=true;
+    bool isOn=false;
 
     QFile backlightFile("/sys/class/backlight/rpi_backlight/bl_power");
 
@@ -38,7 +40,7 @@ void ScriptLauncher::apagarPantalla()
 
 void ScriptLauncher::encenderPantalla()
 {
-    bool isOn=false;
+    bool isOn=true;
 
     QFile backlightFile("/sys/class/backlight/rpi_backlight/bl_power");
 
